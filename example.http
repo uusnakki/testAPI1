@@ -1,0 +1,10 @@
+GET http://localhost:3000/math
+
+###
+
+POST http://localhost:3000/math
+Content-Type: application/json
+
+{
+    "content": [2,3,13,13]
+}
