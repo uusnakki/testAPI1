@@ -4,25 +4,24 @@ var router = express.Router();
 var sumAll = require('../public/javascripts/sumAll')
 var isPrime = require('../public/javascripts/isPrime')
 
-const allNumbers = []
+const allNumberObjects = []
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send(allNumbers);
+router.get('/', function (req, res, next) {
+  res.send(allNumberObjects);
 });
 
 /* POST integer functions. */
-router.post('/', function(req, res, next) {
-  //testArr = [0,1,2,3]
+router.post('/', function (req, res, next) {
   const arr = req.body.content
-  console.log(arr)
-  
-  const s = sumAll(arr)
-  console.log(s)
-  
-  const p = isPrime(s)
-  console.log(p)
-  allNumbers.push(s,p)
+  const sumValue = sumAll(arr)
+  const primeValue = isPrime(sumValue)
+
+  const numObject = {
+    intValue: sumValue,
+    isPrime: primeValue
+  }
+  allNumberObjects.push(numObject)
   res.send('Array counted!');
 });
 
