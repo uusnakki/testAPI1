@@ -5,13 +5,37 @@ var sumAll = require('../public/javascripts/sumAll')
 var isPrime = require('../public/javascripts/isPrime')
 
 const allNumberObjects = []
+const isPrimeObject = []
 
 /* GET users listing. */
-router.get('/multipleprime', function (req, res, next) {
+router.get('/prime', function (req, res, next) {
+  res.send(isPrimeObject);
+});
+
+/* GET users listing. */
+router.get('/multipleprimes', function (req, res, next) {
   res.send(allNumberObjects);
 });
 
-/* POST integer functions. 
+/* POST an integer. 
+* Gets numbers as strings
+* Sends the numObject to the server,
+where one can check if the number is a prime number
+*/
+
+router.post('/prime', function (req, res, next) {
+  const requestedInt = req.body.content
+  const isPrimeValue = isPrime(requestedInt)
+
+  const numObject = {
+    intValue: requestedInt,
+    isPrime:{isPrimeValue} 
+  }
+  isPrimeObject.push(numObject.isPrime)
+  res.send({numObject: numObject});
+});
+
+/* POST integer summary. 
 * Gets numbers as strings
 * Modifies numbers to an array
 * Uses sum function to sum the numbers
@@ -20,15 +44,15 @@ router.get('/multipleprime', function (req, res, next) {
 where one can check the sum and if it is prime
 */
 
-router.post('/multipleprime', function (req, res, next) {
+router.post('/multipleprimes', function (req, res, next) {
   const requestedNumbers = req.body.content
   const arr = Array.from(String(requestedNumbers), Number);
   const sumValue = sumAll(arr)
-  const primeValue = isPrime(sumValue)
+  const isPrimeValue = isPrime(sumValue)
 
   const numObject = {
-    intValue: sumValue,
-    isPrime: primeValue
+    result: sumValue,
+    isPrime: isPrimeValue
   }
   allNumberObjects.push(numObject)
   res.send({numObject: numObject});
