@@ -7,13 +7,22 @@ var isPrime = require('../public/javascripts/isPrime')
 const allNumberObjects = []
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
+router.get('/multipleprime', function (req, res, next) {
   res.send(allNumberObjects);
 });
 
-/* POST integer functions. */
-router.post('/', function (req, res, next) {
-  const arr = req.body.content
+/* POST integer functions. 
+* Gets numbers as strings
+* Modifies numbers to an array
+* Uses sum function to sum the numbers
+* Checks if the sum is a prime number
+* Sends the numObject to the server,
+where one can check the sum and if it is prime
+*/
+
+router.post('/multipleprime', function (req, res, next) {
+  const requestedNumbers = req.body.content
+  const arr = Array.from(String(requestedNumbers), Number);
   const sumValue = sumAll(arr)
   const primeValue = isPrime(sumValue)
 
@@ -22,7 +31,7 @@ router.post('/', function (req, res, next) {
     isPrime: primeValue
   }
   allNumberObjects.push(numObject)
-  res.send('Array counted!');
+  res.send({numObject: numObject});
 });
 
 module.exports = router;
