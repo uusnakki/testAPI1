@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var sumAll = require('../public/javascripts/sum')
+var sumAll = require('../public/javascripts/sumAll')
+var isPrime = require('../public/javascripts/isPrime')
 
 const allNumbers = []
 
@@ -12,13 +13,17 @@ router.get('/', function(req, res, next) {
 
 /* POST integer functions. */
 router.post('/', function(req, res, next) {
-  testArr = [0,1,2,3]
-  console.log(testArr)
+  //testArr = [0,1,2,3]
+  const arr = req.body.content
+  console.log(arr)
   
-  const s = sumAll(testArr)
+  const s = sumAll(arr)
   console.log(s)
-  allNumbers.push(s)
-  res.send('<h1>{$s}</h1>');
+  
+  const p = isPrime(s)
+  console.log(p)
+  allNumbers.push(s,p)
+  res.send('Array counted!');
 });
 
 module.exports = router;
