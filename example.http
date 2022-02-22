@@ -1,8 +1,8 @@
-GET http://localhost:3000/math/multipleprimes
+GET http://localhost:3001/math/multipleprimes
 
 ###
 
-POST http://localhost:3000/math/multipleprimes
+POST http://localhost:3001/math/multipleprimes
 Content-Type: application/json
 
 {
@@ -10,11 +10,11 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/math/prime
+GET http://localhost:3001/math/prime
 
 ###
 
-POST http://localhost:3000/math/prime
+POST http://localhost:3001/math/prime
 Content-Type: application/json
 
 {
