@@ -3,8 +3,7 @@ Test application for REST API calls.
 
 App here: https://apifornumbers.herokuapp.com/
 
-Endpoint 1: https://apifornumbers.herokuapp.com/math/multipleprimes
-&nbsp;
+Endpoint 1: https://apifornumbers.herokuapp.com/math/multipleprimes  
 Endpoint 2: https://apifornumbers.herokuapp.com/math/prime" 
 
 Done with Node.js with some helpful external libraries adn middlewares:
