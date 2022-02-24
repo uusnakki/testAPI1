@@ -17,7 +17,8 @@ Frontend:
 
 ## Guide for usage:
 
-First form: enter a line of numbers to be send to an endpoint 1. Backend sums the values and tells the user if the sum is a prime number or not.  
+First form: enter a line of numbers to be send to an endpoint 1. Backend sums the values and tells the user if the sum is a prime number or not.
+
 Second form: enter a value (integer) to be send to an endpoint 2. Backend tells if that value is a prime number or not.
 
 ![image](https://user-images.githubusercontent.com/59486096/155558436-6ed47535-6435-4538-a516-a5b71a29c6cc.png)
