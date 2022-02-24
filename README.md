@@ -21,6 +21,9 @@ First form: enter a line of numbers to be send to an endpoint 1. Backend sums th
 
 Second form: enter a value (integer) to be send to an endpoint 2. Backend tells if that value is a prime number or not.
 
+Endpoint 1
 ![image](https://user-images.githubusercontent.com/59486096/155558436-6ed47535-6435-4538-a516-a5b71a29c6cc.png)
+
+Endpoint 2
 ![image](https://user-images.githubusercontent.com/59486096/155558568-ba920ca8-e344-48f2-8755-ee0d46b55fa2.png)
 
