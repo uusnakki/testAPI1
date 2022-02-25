@@ -40,7 +40,6 @@ Cons:
 
 ### Negative numbers are OK, return null in backend
 ![image](https://user-images.githubusercontent.com/59486096/155685249-b6790348-6ecc-4fd7-9852-5c84a48d3e9d.png)
-![image](https://user-images.githubusercontent.com/59486096/155685199-0524b92d-4ac2-4bf5-a786-6f682784a7bb.png)
 
-![image](https://user-images.githubusercontent.com/59486096/155685096-cd5e0ec1-b71c-40c7-a1f3-cb9e87f92739.png)
+![image](https://user-images.githubusercontent.com/59486096/155685199-0524b92d-4ac2-4bf5-a786-6f682784a7bb.png)
 
