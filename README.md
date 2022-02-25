@@ -27,3 +27,10 @@ Second form: enter a value (integer) to be send to an endpoint 2. Backend tells 
 ### Endpoint 2
 ![image](https://user-images.githubusercontent.com/59486096/155558568-ba920ca8-e344-48f2-8755-ee0d46b55fa2.png)
 
+Pros:
+- Clear usability and logic behind the application
+- Gets the job done
+
+Cons:
+- Testing should be done better: E2E testing, unit testing
+- Validation has not been done: system can handle the input of negative numbers, fraction numbers etc. This should be done that the error thrown when trying these inputs.
