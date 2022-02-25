@@ -11,6 +11,8 @@ Done with Node.js with some helpful external libraries adn middlewares:
 - Cors
 - Axios (frontend)
 
+Testing done via VS Code´s own REST Client: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
 Frontend:
 ![image](https://user-images.githubusercontent.com/59486096/155557416-691f4bcd-b6d1-445d-9df6-9868e5b96964.png)
 
