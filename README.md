@@ -30,6 +30,7 @@ Second form: enter a value (integer) to be send to an endpoint 2. Backend tells 
 Pros:
 - Clear usability and logic behind the application
 - Gets the job done
+- Some validation in frontend (value should be a number and integer)
 
 Cons:
 - Testing should be done better: E2E testing, unit testing
