@@ -33,4 +33,7 @@ Pros:
 
 Cons:
 - Testing should be done better: E2E testing, unit testing
-- Validation has not been done: system can handle the input of negative numbers, fraction numbers etc. This should be done that the error thrown when trying these inputs.
+- Validation can be done better: for example system can handle the input of negative numbers. This should be done that the error thrown when trying these inputs. For now, fraction are validated in frontend.
+
+### Validation of fraction numbers
+![Screenshot_1](https://user-images.githubusercontent.com/59486096/155684486-58bd2904-c8a2-4746-b585-d9b9a3ceebe3.png)
